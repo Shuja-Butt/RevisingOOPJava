@@ -1,4 +1,6 @@
+import javacollectionsframework.JavaSets;
 
+import java.util.Set;
 
 public class Main {
 
@@ -90,7 +92,32 @@ public class Main {
         UpcastingDowncastingAndPolymorphismChild1Lv1  exDowncast= ((UpcastingDowncastingAndPolymorphismChild1Lv1)udAp);
         exDowncast.myfun(8);
 
-        
+
+
+        //BeginJavaCollection
+
+        JavaSets  jS= new JavaSets();
+        jS.addBankAccounts("IBAN68732Pk87");
+        //duplicates wont be added but Hapset is unordered
+        jS.addBankAccounts("IBAN68732Pk879");
+        jS.addBankAccounts("IBAN68732Pk87");
+        jS.printAccounts();
+        jS.removeBankAccount("IBAN68732Pk87");
+        jS.printAccounts();
+
+
+        JavaSets jsImmutable = new JavaSets(Set.of("IABN567", "IBAN235", "IBAN897"));
+        jsImmutable.printAccounts();
+        jsImmutable.addBankAccounts("cant be added");
+
+
+
+
+
+        //EndJavaCollections
+
+
+
 
 
 
