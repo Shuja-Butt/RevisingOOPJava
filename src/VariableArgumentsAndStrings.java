@@ -20,6 +20,8 @@ public class VariableArgumentsAndStrings {
 
     }
 
+
+
     //Strings
 
     //String are objects in Java and do not have wrapper classes

@@ -5,13 +5,6 @@ public class Main {
     int g =a;
     static int a;
 
-
-
-
-
-
-
-
     public static void main(String[] args) {
         //Begin Scope
         Scope s = new Scope();
@@ -71,8 +64,57 @@ public class Main {
 
 
 
+        //BeginUpcastingDowncastingAndPolymorphism
+
+        //implicit upcasting
+        UpcastingDowncastingAndPolymorphism udAp = new UpcastingDowncastingAndPolymorphismChild1Lv1();
+
+        //with parent ref we can only access at access level as it doesnot know about the child
+
+        udAp.general();
+
+        //explicit downcast to access child behaviours and attributes
+        System.out.println("explicit downcast to access child attribute "+ ((UpcastingDowncastingAndPolymorphismChild1Lv1) udAp).pVar);
+
+        //ploymorphism ,objects having the ability to take on multiple forms
+        //runtime-or-dynamic polymorphism also achieved through method overriding
+        udAp = new UpcastingDowncastingAndPolymorphismChild2Lv1();
+        udAp.general();
+
+
+        //Overloaded not Overridden in class hierarchy
+
+        udAp = new UpcastingDowncastingAndPolymorphismChild1Lv1();
+        udAp.myfun();
+
+        UpcastingDowncastingAndPolymorphismChild1Lv1  exDowncast= ((UpcastingDowncastingAndPolymorphismChild1Lv1)udAp);
+        exDowncast.myfun(8);
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //EndUpcastingDowncastingAndPolymorphism
+
+
+
+
+
 
 
 

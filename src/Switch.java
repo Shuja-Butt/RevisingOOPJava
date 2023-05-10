@@ -1,3 +1,5 @@
+import java.util.Map;
+
 public class Switch {
 
     private  int mySwitchAnswer = 1;
@@ -78,6 +80,8 @@ public class Switch {
             default:
                 yield "Unknown";
         };
+
+
 
 
 
