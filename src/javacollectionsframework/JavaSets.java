@@ -1,6 +1,7 @@
 package javacollectionsframework;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 // Many implements of Set interface , usually unordered and unique
@@ -24,16 +25,10 @@ public class JavaSets {
     }
 
     public  void printAccounts(){
-
         System.out.println(bankAccounts);
     }
 
     public void removeBankAccount(String bankStringToDestroy){
-
        bankAccounts.remove(bankStringToDestroy);
-
     }
-
-
-
 }

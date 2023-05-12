@@ -1,3 +1,5 @@
+import com.linkedinlearning.generics.NonGenericClass;
+import javacollectionsframework.JavaMaps;
 import javacollectionsframework.JavaSets;
 
 import java.util.Set;
@@ -96,6 +98,13 @@ public class Main {
 
         //BeginJavaCollection
 
+        //To loop over collections we can use Interator, enhanced forloop or ForEach loop
+
+
+
+
+
+
         JavaSets  jS= new JavaSets();
         jS.addBankAccounts("IBAN68732Pk87");
         //duplicates wont be added but Hapset is unordered
@@ -108,13 +117,59 @@ public class Main {
 
         JavaSets jsImmutable = new JavaSets(Set.of("IABN567", "IBAN235", "IBAN897"));
         jsImmutable.printAccounts();
-        jsImmutable.addBankAccounts("cant be added");
+        //jsImmutable.addBankAccounts("cant be added");
+
+
+
+
+
+        //Maps
+        JavaMaps jM = new JavaMaps();
+        jM.addFinalTestResults("A", 34);
+        jM.addFinalTestResults("B", 89);
+        jM.addFinalTestResults("C", 78);
+
+        jM.addmakeupTestResults("A", 78);
+        jM.addmakeupTestResults("B", 72);
+        jM.addmakeupTestResults("C", 65);
+
+        jM.printMaps();
+        jM.shouldScoresUpdate();
+        jM.printMaps();
+
+
+
+
+
+        //Lists
+
+
+        //Queue
+
+
 
 
 
 
 
         //EndJavaCollections
+
+
+
+        //BeginJavaGenerics
+
+
+        NonGenericClass nGc = new NonGenericClass();
+        // with raw list we can have different types as every class extends from objects
+        //Using generics we can be type safe
+        //We do not need explicit casting
+        nGc.addAndProcess();
+        nGc.aCase();
+
+        //EndJavaGenerics
+
+
+
 
 
 
