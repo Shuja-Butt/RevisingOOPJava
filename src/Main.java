@@ -1,7 +1,8 @@
-import com.linkedinlearning.generics.NonGenericClass;
+import com.linkedinlearning.generics.*;
 import javacollectionsframework.JavaMaps;
 import javacollectionsframework.JavaSets;
 
+import javax.swing.*;
 import java.util.Set;
 
 public class Main {
@@ -96,6 +97,9 @@ public class Main {
 
 
 
+        //EndUpcastingDowncastingAndPolymorphism
+
+
         //BeginJavaCollection
 
         //To loop over collections we can use Interator, enhanced forloop or ForEach loop
@@ -156,6 +160,9 @@ public class Main {
 
 
 
+
+
+
         //BeginJavaGenerics
 
 
@@ -165,6 +172,34 @@ public class Main {
         //We do not need explicit casting
         nGc.addAndProcess();
         nGc.aCase();
+
+        //Generis only work with Reference types
+        //Autoboxing and unboxing in java helps retrieve value from gerics and store in primitive types
+
+        GenericBoxClass<Book> boxOfBooks = new GenericBoxClass<>();
+        boxOfBooks.addItem(new Book("Harry Potter", "Slf",0.7));
+        boxOfBooks.addItem(new Book("Zong", "Jazz",0.9));
+
+
+        GenericBoxClass<Fruit> boxOfFruits = new GenericBoxClass<>();
+        boxOfFruits.addItem(new Fruit("Pakistan", "Mango",0.7));
+        boxOfFruits.addItem(new Fruit("Pakistan", "Apple",9.8));
+
+        System.out.println(boxOfFruits.toString());
+        System.out.println(UtilityGenericMethods.getCountOfItems(boxOfBooks));
+
+
+        //Adding Upper Bound on GenericClass using extends
+       System.out.println(boxOfBooks.getTotalWeight());
+        System.out.println(boxOfFruits.getTotalWeight());
+
+
+
+
+        //class hierarchies
+        GenericClassHierarchies<Fruit> myCardBoardBoxWithChildRef = new GenericClassHierarchies<>();
+        GenericBoxClass<Fruit> myCardBoardBox = myCardBoardBoxWithChildRef;
+        myCardBoardBox.getTotalWeight();
 
         //EndJavaGenerics
 
@@ -191,7 +226,7 @@ public class Main {
 
 
 
-        //EndUpcastingDowncastingAndPolymorphism
+
 
 
 

@@ -62,6 +62,28 @@ public class NonGenericClass {
         //so raw types accept data of type Object so its allowed
         List A = new ArrayList();
 
+        //still a raw type ie. not using diamond operator
+        List<String> B = new ArrayList();
+
+        //using diamond operator it uses inference
+        List<String> usingTypeInference = new ArrayList<>();
+
+
+        // Autoboxing and unboxing in java
+        List<Integer> myList = new ArrayList<>();
+        myList.add(8);
+        //Generics only work with reference types using wrapper classes then how below line is possible
+        //possible cuz of autoboxing and unboxing feature in Java
+        int myUnboxedInt = myList.get(0);
+
+
+
+
+
+
+
+
+
         A.add("Apple");
         A.add(8);
 
@@ -80,7 +102,7 @@ public class NonGenericClass {
         //The reason is that Object is super() of all classes so compiler considers it a valid cast cuz A.get(0) type is object but at run time when
         // java sees the acutual type of object is Interger it errors out cuz there is no direct relationhip or inheritance between string and interger
         //and hence are not directly compatible
-        String stringToNumUsingCast =  (String) A.get(0);
+        //String stringToNumUsingCast =  (String) A.get(1);
     }
 
 
