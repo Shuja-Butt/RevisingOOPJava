@@ -196,12 +196,40 @@ public class Main {
 
 
 
-        //class hierarchies
+        //generic class hierarchies
         GenericClassHierarchies<Fruit> myCardBoardBoxWithChildRef = new GenericClassHierarchies<>();
         GenericBoxClass<Fruit> myCardBoardBox = myCardBoardBoxWithChildRef;
         myCardBoardBox.getTotalWeight();
 
+
+        //Generic type hierarchies
+
+        GenericBoxClass<Apple> boxOfApples = new GenericBoxClass<>();
+        // below will give an error as GenericBoxClass<Apple> != GenericBoxClass<Fruit>
+      //  boxOfFruits = boxOfApples;
+
+
+
         //EndJavaGenerics
+
+
+
+        //BeginTypeInferenceAndTargetTypes
+
+        //Type witness
+        //ways of inference
+
+        //EndTypeInferenceAndTargetTypes
+
+
+
+        // BeginFunctionalInterface
+
+
+
+
+
+        // EndFunctionalInterface
 
 
 

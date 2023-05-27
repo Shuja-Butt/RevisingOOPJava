@@ -27,6 +27,40 @@ public class GenericBoxClass<N extends Boxable> {
       return  myGenericList.get(myGenericList.size()-1);
     }
 
+
+
+    //Type inference using method arguments
+    // Note static methods must redeclare the bounds and type paramets agian, that auto shit only happens for instance mrthods
+    //ie type arguments become avaiable
+    public  static  <N extends  Boxable> N of(N t){
+
+        //Inference using Generic class instantiation in below line , ie the diamond opeator
+        GenericBoxClass<N> inferenceUsingMethodArguments = new GenericBoxClass<>();
+        inferenceUsingMethodArguments.addItem(t);
+        return  t;
+
+    }
+
+
+
+    //Using Upper bounded wildCrds
+
+    public double getAverageWeighOfFruit(GenericBoxClass<? extends  Fruit> myFruitBox){
+        return myFruitBox.getItems().stream().mapToDouble(Boxable::getWeight).sum()/ myFruitBox.getItems().size();
+    }
+
+
+    //Using lower bounded wildcards
+
+    public void addAppleToBox(GenericBoxClass<? super  Apple> myFruitBox){
+         myFruitBox.addItem(new Apple());
+    }
+
+
+
+
+
+
     public double getTotalWeight(){
         double weight =0;
         for(N item: myGenericList){

@@ -11,6 +11,11 @@ public class Fruit  implements  Boxable{
         this.name = name;
         this.weight = weight;
     }
+    public Fruit() {
+        this.country = "PAKISTAN";
+        this.name = "Kiwi";
+        this.weight = 0.3;
+    }
 
     public void setCountry(String country) {
         this.country = country;
